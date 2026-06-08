@@ -220,6 +220,65 @@ tbody tr:hover td{background:var(--card2)}
 .login-logout{background:var(--side2);border:1px solid var(--side-border);color:var(--side-muted);border-radius:8px;padding:5px 10px;font-size:11px;cursor:pointer;font-weight:600;margin-left:8px}
 .login-logout:hover{border-color:var(--rose);color:#ff8585}
 
+
+.metas-bar{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:22px}
+.meta-chip{position:relative;overflow:hidden;border-radius:13px;padding:12px 14px;background:var(--card);border:1px solid var(--border-soft);box-shadow:var(--shadow)}
+.meta-chip-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px}
+.meta-chip-label{font-size:9.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+.meta-chip-pct{font-family:'DM Mono',monospace;font-size:11px;font-weight:700}
+.meta-chip-val{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--ink);line-height:1;margin-bottom:3px}
+.meta-chip-meta{font-size:9.5px;color:var(--dim);font-family:'DM Mono',monospace;margin-bottom:7px}
+.meta-chip-bar{height:5px;background:var(--card2);border-radius:3px;overflow:hidden}
+.meta-chip-fill{height:100%;border-radius:3px;transition:width 1s cubic-bezier(.34,1.56,.64,1)}
+.meta-periodo{font-size:10px;color:var(--muted);font-weight:600;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px}
+@media(max-width:1100px){.metas-bar{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.metas-bar{grid-template-columns:repeat(2,1fr)}}
+
+
+.anio-resumen{margin-bottom:22px}
+.anio-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.anio-mes{border-radius:12px;padding:13px 14px;background:var(--card);border:1px solid var(--border-soft);box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;cursor:pointer}
+.anio-mes:hover{transform:translateY(-2px);box-shadow:var(--shadow-hover)}
+.anio-mes.vacio{opacity:.45}
+.anio-mes-nombre{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.anio-mes-vn{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--ink);line-height:1}
+.anio-mes-sub{font-size:10px;color:var(--dim);margin-top:4px;font-family:'DM Mono',monospace}
+@media(max-width:1100px){.anio-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:560px){.anio-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:420px){.anio-grid{grid-template-columns:repeat(2,1fr)}}
+
+
+.kpi-control{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;background:var(--card);border:1px solid var(--border-soft);border-radius:16px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:18px}
+.kpi-control-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--ink)}
+.kpi-control-sub{font-size:12px;color:var(--muted);margin-top:5px;max-width:560px;line-height:1.5}
+.kpi-control-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.kpi-leyenda{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:18px;font-size:12px;color:var(--dim)}
+.kpi-leyenda span{display:inline-flex;align-items:center;gap:7px}
+.kpi-ldot{width:11px;height:11px;border-radius:50%;display:inline-block}
+.kpi-admin-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.kpi-big{border-radius:18px;background:var(--card);border:1px solid var(--border-soft);box-shadow:var(--shadow);overflow:hidden;transition:box-shadow .2s}
+.kpi-big:hover{box-shadow:var(--shadow-hover)}
+.kpi-big-head{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--border-soft)}
+.kpi-big-ic{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:19px;background:var(--card2);flex-shrink:0}
+.kpi-big-titulo{font-size:15px;font-weight:700;color:var(--ink)}
+.kpi-big-desc{font-size:11px;color:var(--muted);margin-top:2px}
+.kpi-periodos{display:grid;grid-template-columns:repeat(3,1fr)}
+.kpi-periodo-col{padding:15px 16px;border-right:1px solid var(--border-soft);position:relative}
+.kpi-periodo-col:last-child{border-right:none}
+.kpi-periodo-col.malo{background:rgba(224,73,95,.07)}
+.kpi-periodo-col.malo::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--rose)}
+.kpi-periodo-col.bien::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--sage)}
+.kpi-periodo-col.medio::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--amber)}
+.kpi-per-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.kpi-per-val{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;line-height:1;margin-bottom:4px}
+.kpi-per-meta{font-size:10.5px;color:var(--dim);font-family:'DM Mono',monospace;margin-bottom:8px}
+.kpi-per-bar{height:6px;background:var(--card2);border-radius:3px;overflow:hidden;margin-bottom:6px}
+.kpi-per-fill{height:100%;border-radius:3px;transition:width .9s cubic-bezier(.34,1.56,.64,1)}
+.kpi-per-estado{font-size:10.5px;font-weight:700;display:flex;align-items:center;gap:5px}
+.kpi-alerta{margin-top:2px;background:var(--rose);color:#fff;font-size:9px;font-weight:700;padding:2px 7px;border-radius:8px;display:inline-block;text-transform:uppercase;letter-spacing:.5px}
+@media(max-width:980px){.kpi-admin-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.kpi-periodos{grid-template-columns:1fr}.kpi-periodo-col{border-right:none;border-bottom:1px solid var(--border-soft)}}
+
 </style>
 </head><body>
 <div id="loginScreen">
@@ -252,7 +311,7 @@ tbody tr:hover td{background:var(--card2)}
         <button class="nav-btn active" onclick="switchView('resumen')"><span class="ic">&#128202;</span>Resumen</button>
         <button class="nav-btn" onclick="switchView('ventas')"><span class="ic">&#128176;</span>Ventas</button>
         <button class="nav-btn" onclick="switchView('gastos')"><span class="ic">&#129534;</span>Gastos</button>
-        <button class="nav-btn" onclick="switchView('semaforo')"><span class="ic">&#128682;</span>Semaforo</button>
+        <button class="nav-btn" onclick="switchView('semaforo')"><span class="ic">&#128202;</span>KPIs</button>
         <button class="nav-btn" onclick="switchView('historial')"><span class="ic">&#128203;</span>Historial</button>
         <button class="nav-btn" onclick="switchView('cierre')"><span class="ic">&#128197;</span>Cierre Diario</button>
       </nav>
@@ -279,6 +338,7 @@ tbody tr:hover td{background:var(--card2)}
     </div>
     <main class="main">
     <div class="view active" id="view-resumen">
+      <div class="metas-bar" id="metasResumen"></div>
       <div class="resumen-header"><div class="trimestre-wrap"><span class="section-title" style="margin:0">Historial trimestre</span><div id="trimestreBar"></div></div></div>
       <div class="section-title">Ventas del mes</div>
       <div class="grid-4" id="kpiVentasRow1"></div>
@@ -300,6 +360,7 @@ tbody tr:hover td{background:var(--card2)}
       <div class="chart-card"><div class="chart-title">Comparativo del mes por dia</div><div class="chart-sub">Venta neta y gastos diarios, con linea de margen</div><div class="chart-wrap" style="height:300px"><canvas id="chartResumenVG"></canvas></div></div>
     </div>
     <div class="view" id="view-ventas">
+      <div class="metas-bar" id="metasVentas"></div>
       <div class="week-selector" id="weekBtnsVentas"><button class="week-btn active" onclick="setWeekFilter(-1,this,'ventas')">Mes</button></div>
       <div class="grid-4" id="ventasKpis"></div>
       <div class="grid-2-1">
@@ -313,6 +374,7 @@ tbody tr:hover td{background:var(--card2)}
       <div class="chart-card" style="margin-top:2px"><div class="chart-title">Ventas vs Gastos</div><div class="chart-sub">Barras de venta neta y gastos, con linea de margen (venta - gasto)</div><div class="chart-wrap" style="height:300px"><canvas id="chartVentaGasto"></canvas></div></div>
     </div>
     <div class="view" id="view-gastos">
+      <div class="metas-bar" id="metasGastos"></div>
       <div class="week-selector" id="weekBtnsGastos"><button class="week-btn active" onclick="setWeekFilter(-1,this,'gastos')">Mes</button></div>
       <div class="grid-4" id="gastosKpis"></div>
       <div class="grid-2-1">
@@ -323,15 +385,24 @@ tbody tr:hover td{background:var(--card2)}
       <div class="tabla-wrap"><table><thead><tr><th>Fecha</th><th>Categoria</th><th>Proveedor</th><th>Producto</th><th style="text-align:right">Valor</th></tr></thead><tbody id="tablaGastos"></tbody></table></div>
     </div>
     <div class="view" id="view-semaforo">
-      <div class="section-title">Semaforo de KPIs - mes seleccionado</div>
-      <div class="grid-3" style="margin-bottom:28px" id="sfMensualGrid"></div>
-      <div class="section-title">Semaforo diario - ultimos 7 dias</div>
-      <div class="semaforo-grid" id="semaforoDiario"></div>
-      <div class="divider"></div>
-      <div class="section-title">% Costos sobre venta neta</div>
-      <div class="grid-3" id="sfCostosGrid"></div>
+      <div class="kpi-control">
+        <div>
+          <div class="kpi-control-title">Tablero de control del administrador</div>
+          <div class="kpi-control-sub">Cada indicador muestra el avance del dia, la semana y el mes contra su meta. Rojo = no se cumple, requiere accion.</div>
+        </div>
+        <div class="kpi-control-right">
+          <span class="field-label">Fecha de referencia</span>
+          <input type="date" class="input date" id="kpiFecha" onchange="renderKPIsAdmin()">
+          <button class="btn btn-gold" onclick="descargarKPIsPDF()">Descargar informe PDF</button>
+        </div>
+      </div>
+      <div id="kpiSemaforoLeyenda" class="kpi-leyenda"></div>
+      <div id="kpiAdminGrid"></div>
     </div>
     <div class="view" id="view-historial">
+      <div class="metas-bar" id="metasHistorial"></div>
+      <div class="section-title">Resumen del ano por mes</div>
+      <div class="anio-resumen" id="anioResumen"></div>
       <div class="info-banner"><span style="font-size:22px">&#128203;</span><div><div style="font-size:13px;font-weight:700;color:var(--sky)">Vista de solo lectura</div><div style="font-size:12px;color:var(--muted);margin-top:2px">El ingreso de datos se realiza desde el <strong style="color:var(--ink-soft)">Formulario de Google Sheets</strong>.</div></div></div>
       <div class="grid-4" id="historialKpis"></div>
       <div class="filter-bar">
@@ -339,7 +410,8 @@ tbody tr:hover td{background:var(--card2)}
         <span class="field-label">Hasta</span><input type="date" class="input date" id="filtroHasta2">
         <button class="btn btn-ghost" onclick="aplicarFiltroHistorial2()">Filtrar</button>
         <button class="btn btn-ghost" onclick="limpiarFiltro()">Limpiar</button>
-        <button class="btn btn-gold" onclick="exportarCSV()">Exportar CSV</button>
+        <button class="btn btn-ghost" onclick="exportarCSV()">Exportar CSV</button>
+        <button class="btn btn-gold" onclick="descargarInformeContable()">Informe Contable PDF</button>
         <div class="filter-totals"><span>Dias <strong id="ftDias">-</strong></span><span>VN Total <strong id="ftVN">-</strong></span><span>Clientes <strong id="ftCli">-</strong></span></div>
       </div>
       <div class="tabla-wrap"><table><thead><tr><th>Fecha</th><th>Dia</th><th>Encargado</th><th style="text-align:right">V. Bruta</th><th style="text-align:right">Propinas</th><th style="text-align:right">Ipo</th><th style="text-align:right">V. Neta</th><th style="text-align:right">PAX</th><th style="text-align:right">Ticket</th><th style="text-align:center">KPI</th></tr></thead><tbody id="tablaHistorial"></tbody></table></div>
@@ -388,7 +460,16 @@ function iniciarDashboard(){
   fetchAllData();
 }
 
-var METAS = {venta_neta_diaria:2850163,venta_neta_mensual:86000000,venta_bruta_mensual:100900000,clientes_mensual:1261,ticket_promedio:80000,ejecutivos_mensual:1000,pct_cocina:0.30,pct_nomina:0.30,pct_servicios:0.20};
+var METAS = {
+  venta_bruta_mensual:101000000, venta_bruta_semanal:25000000, venta_bruta_diaria:3607000,
+  venta_neta_mensual:86000000, venta_neta_diaria:2850163,
+  clientes_mensual:1261, clientes_semanal:315, clientes_diaria:45,
+  ticket_promedio:80000,
+  ejecutivos_mensual:1000, ejecutivos_semanal:250, ejecutivos_diaria:50,
+  turnos_mensual:5000000, turnos_semanal:1250000, turnos_diaria:179000,
+  gastos_mensual:80000000, gastos_semanal:20000000, gastos_diaria:2860000,
+  pct_cocina:0.30, pct_nomina:0.30, pct_servicios:0.20
+};
 var CIERRES=[],GASTOS=[],selectedMes=5,activeWeekVentas=-1,activeWeekGastos=-1,chartInstances={},historialFiltrado=[],currentView='resumen';
 var NOMBRES_MES=['','Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
 var TIPO_SHORT={'1 Insumos para Cocina':'1 Cocina','2 Insumo Bar licores Otros':'2 Bar/Licores','3 Compras TQ':'3 TQ','4 Insumos Personal':'4 Personal','5 Nomina y Turnos':'5 Nomina','6 Servicios Publicos y Arriendo':'6 Servicios','7 Gasto no programado':'7 No Prog.','8 Otros Gastos (Publicidad, Arreglos locativos, Cortesias, Gastos Varios)':'8 Otros'};
@@ -453,6 +534,7 @@ function afterDataLoad(){setLoading(false);var ms=[];CIERRES.forEach(function(d)
 
 function filterMes(arr,m){return arr.filter(function(d){return d.mes===m;});}
 function sumBy(arr,k){return arr.reduce(function(s,r){return s+(r[k]||0);},0);}
+function normDia(s){return String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").trim().toLowerCase();}
 function semColor(p){return p>=1?'#1faf6b':p>=.8?'#e8941a':'#e0495f';}
 function semDot(p){return p>=1?'green':p>=.8?'yellow':'red';}
 function semIcon(p){return p>=1?'\u2705':p>=.8?'\u26A0\uFE0F':'\u274C';}
@@ -461,6 +543,54 @@ Chart.defaults.color='#8a93a6';Chart.defaults.font.family="'DM Sans',sans-serif"
 var TT={backgroundColor:'#fff',borderColor:'#e2e7f0',borderWidth:1,titleColor:'#1d2433',bodyColor:'#4a5468',padding:12,cornerRadius:10,displayColors:false};
 function makeChart(id,type,labels,datasets,extra){if(chartInstances[id])chartInstances[id].destroy();var el=document.getElementById(id);if(!el)return;var opts={responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:Object.assign({},TT,{callbacks:{label:function(c){return ' '+fmtFull(c.raw);}}})},scales:{x:{grid:{display:false},ticks:{color:'#8a93a6'}},y:{grid:{color:'rgba(20,30,60,.06)'},ticks:{color:'#8a93a6',callback:function(v){return fmt(v);}}}}};if(extra)opts=Object.assign(opts,extra);chartInstances[id]=new Chart(el,{type:type,data:{labels:labels,datasets:datasets},options:opts});}
 
+function metaChip(label,val,meta,fmtFn){
+  var f=fmtFn||fmt;
+  var pv=meta>0?val/meta:0;
+  var color=pv>=1?'#1faf6b':pv>=.8?'#e8941a':'#e0495f';
+  return '<div class="meta-chip"><div class="meta-chip-top"><span class="meta-chip-label">'+label+'</span><span class="meta-chip-pct" style="color:'+color+'">'+(pv*100).toFixed(0)+'%</span></div><div class="meta-chip-val">'+f(val)+'</div><div class="meta-chip-meta">Meta: '+f(meta)+'</div><div class="meta-chip-bar"><div class="meta-chip-fill" style="width:'+Math.min(pv*100,100)+'%;background:'+color+'"></div></div></div>';
+}
+function renderMetasBar(elId, periodo){
+  // periodo: 'mes' | 'semana' (con numero) | 'dia' (con fecha)
+  var el=document.getElementById(elId);
+  if(!el)return;
+  var d, g, suf, etiqueta;
+  if(periodo && periodo.tipo==='dia'){
+    d=CIERRES.filter(function(r){return r.fecha===periodo.fecha;});
+    g=GASTOS.filter(function(r){return r.fecha===periodo.fecha;});
+    suf='diaria'; etiqueta='Dia '+(periodo.fecha||'-');
+  } else if(periodo && periodo.tipo==='semana'){
+    d=filterMes(CIERRES,selectedMes).filter(function(r){return r.semana===periodo.sem;});
+    g=filterMes(GASTOS,selectedMes).filter(function(r){return r.semana===periodo.sem;});
+    suf='semanal'; etiqueta='Semana '+periodo.sem+' de '+NOMBRES_MES[selectedMes];
+  } else {
+    d=filterMes(CIERRES,selectedMes);
+    g=filterMes(GASTOS,selectedMes);
+    suf='mensual'; etiqueta='Mes de '+NOMBRES_MES[selectedMes];
+  }
+  var vBruta=sumBy(d,'venta_bruta');
+  var cli=sumBy(d,'clientes');
+  var ejec=sumBy(d,'ejecutivos');
+  var tkRows=d.filter(function(r){return r.ticket_carta>0;});
+  var tk=tkRows.length?sumBy(tkRows,'ticket_carta')/tkRows.length:0;
+  var gt={};g.forEach(function(r){gt[r.tipo]=(gt[r.tipo]||0)+r.valor;});
+  var turnos=gt['5 Nomina y Turnos']||0;
+  var gastos=sumBy(g,'valor');
+  var mVB=METAS['venta_bruta_'+suf]||METAS.venta_bruta_mensual;
+  var mCli=METAS['clientes_'+suf]||METAS.clientes_mensual;
+  var mEjec=METAS['ejecutivos_'+suf]||METAS.ejecutivos_mensual;
+  var mTurnos=METAS['turnos_'+suf]||METAS.turnos_mensual;
+  var mGastos=METAS['gastos_'+suf]||METAS.gastos_mensual;
+  var html='';
+  html+=metaChip('Venta Bruta',vBruta,mVB,fmt);
+  html+=metaChip('Clientes Salon',cli,mCli,fmtNum);
+  html+=metaChip('Ticket Promedio',tk,METAS.ticket_promedio,fmt);
+  html+=metaChip('Ejecutivos',ejec,mEjec,fmtNum);
+  html+=metaChip('Pago Turnos',turnos,mTurnos,fmt);
+  html+=metaChip('Gastos',gastos,mGastos,fmt);
+  el.classList.remove('metas-bar');
+  el.innerHTML='<div class="meta-periodo">Metas - '+etiqueta+'</div><div class="metas-bar">'+html+'</div>';
+}
+
 function buildMesPills(){var ms=[];CIERRES.forEach(function(d){if(ms.indexOf(d.mes)<0)ms.push(d.mes);});ms.sort(function(a,b){return a-b;});document.getElementById('mesPills').innerHTML=ms.map(function(m){return '<button class="side-pill '+(m===selectedMes?'active':'')+'" onclick="selectMes('+m+')">'+NOMBRES_MES[m]+'</button>';}).join('');buildTrimestre(ms);}
 function selectMes(m){selectedMes=m;buildMesPills();buildWeekButtons();initResumenCharts();if(currentView==='ventas')renderVentasCharts(activeWeekVentas);if(currentView==='gastos')renderGastosCharts(activeWeekGastos);if(currentView==='semaforo')renderSemaforoCharts();}
 function buildTrimestre(ms){var maxVN=1;ms.forEach(function(m){var v=sumBy(filterMes(CIERRES,m),'venta_neta');if(v>maxVN)maxVN=v;});document.getElementById('trimestreBar').innerHTML='<div class="trimestre-bars">'+ms.map(function(m){var vn=sumBy(filterMes(CIERRES,m),'venta_neta');var color=m===selectedMes?'#c79330':'#9fb4d6';return '<div class="tri-bar-wrap"><div class="tri-bar-bg"><div class="tri-bar-fill" style="height:'+(vn/maxVN*100)+'%;background:'+color+'"></div></div><div class="tri-bar-label">'+NOMBRES_MES[m].slice(0,3).toUpperCase()+'</div><div class="tri-bar-val">'+fmt(vn)+'</div></div>';}).join('')+'</div>';}
@@ -468,6 +598,7 @@ function buildTrimestre(ms){var maxVN=1;ms.forEach(function(m){var v=sumBy(filte
 function kpiCard(o){var pv=o.meta?o.val/o.meta:null;var color=pv===null?'var(--dim)':pv>=1?'var(--sage)':pv>=.8?'var(--amber)':'var(--rose)';var dot=pv===null?'gray':pv>=1?'green':pv>=.8?'yellow':'red';var f=o.fmt||fmt;var h='<div class="kpi" style="--accent:var('+(o.accent||'--gold')+')">';if(o.icon)h+='<span class="kpi-icon">'+o.icon+'</span>';h+='<div class="kpi-label">'+o.label+'</div><div class="kpi-value">'+f(o.val)+'</div>';if(o.meta)h+='<div class="kpi-meta-row"><span class="kpi-meta-label">Meta: '+f(o.meta)+'</span><span class="kpi-pct" style="color:'+color+'">'+(pv*100).toFixed(1)+'%</span></div><div class="kpi-bar"><div class="kpi-fill" style="width:'+Math.min(pv*100,100)+'%;background:'+color+'"></div></div>';h+='<div class="kpi-sub"><span class="semaforo-dot '+dot+'" style="width:8px;height:8px"></span>'+(o.sub||'')+'</div></div>';return h;}
 
 function initResumenCharts(){
+  renderMetasBar("metasResumen",{tipo:"mes"});
   var d=filterMes(CIERRES,selectedMes),g=filterMes(GASTOS,selectedMes);if(!d.length)return;
   var totVB=sumBy(d,'venta_bruta'),totProp=sumBy(d,'propinas'),totIpo=sumBy(d,'ipoconsumo'),totVN=sumBy(d,'venta_neta'),totCli=sumBy(d,'clientes'),totAlmL=sumBy(d,'alm_local'),totAlmD=sumBy(d,'alm_dom'),totEjec=sumBy(d,'ejecutivos'),totGastos=sumBy(g,'valor');
   var tkRows=d.filter(function(r){return r.ticket_carta>0;}),avgTk=tkRows.length?sumBy(tkRows,'ticket_carta')/tkRows.length:0,avgDia=d.length?totVN/d.length:0;
@@ -484,7 +615,7 @@ function initResumenCharts(){
   makeChart('chartDonutVentas','doughnut',cd.map(function(x){return x.l;}),[{data:cd.map(function(x){return x.v;}),backgroundColor:cd.map(function(x){return x.c;}),borderWidth:2,borderColor:'#fff'}],{plugins:{legend:{display:false}},scales:{x:{display:false},y:{display:false}},cutout:'66%'});
   document.getElementById('legendDonutVentas').innerHTML=cd.map(function(x){return '<div class="legend-item"><div class="legend-dot" style="background:'+x.c+'"></div><span class="legend-name">'+x.l+'</span><span class="legend-val">'+fmt(x.v)+'</span></div>';}).join('');
   var dow=['Lunes','Martes','Miercoles','Jueves','Viernes','Sabado','Domingo'];
-  makeChart('chartDow','bar',dow,[{data:dow.map(function(dy){var rs=d.filter(function(r){return r.dia===dy;});return rs.length?sumBy(rs,'venta_neta')/rs.length:0;}),backgroundColor:['#7c5fd6','#7c5fd6','#7c5fd6','#7c5fd6','#c79330','#e8613c','#1faf6b'],borderRadius:7,borderSkipped:false}]);
+  makeChart('chartDow','bar',dow,[{data:dow.map(function(dy){var rs=d.filter(function(r){return normDia(r.dia)===normDia(dy);});return rs.length?sumBy(rs,'venta_neta')/rs.length:0;}),backgroundColor:['#7c5fd6','#7c5fd6','#7c5fd6','#7c5fd6','#c79330','#e8613c','#1faf6b'],borderRadius:7,borderSkipped:false}]);
   var gt={};g.forEach(function(r){gt[r.tipo]=(gt[r.tipo]||0)+r.valor;});var gk=Object.keys(gt).sort(function(a,b){return gt[b]-gt[a];});
   makeChart('chartDonutGastos','doughnut',gk.map(function(k){return TIPO_SHORT[k]||k;}),[{data:gk.map(function(k){return gt[k];}),backgroundColor:gk.map(function(k){return TIPO_COLOR[k]||'#8a93a6';}),borderWidth:2,borderColor:'#fff'}],{plugins:{legend:{display:false}},scales:{x:{display:false},y:{display:false}},cutout:'66%'});
   document.getElementById('chartGastosDonutSub').textContent='Total: '+fmt(totGastos);
@@ -519,6 +650,7 @@ function setWeekFilter(week,btn,sec){if(sec==='ventas'){activeWeekVentas=week;va
 function gastoDia(fecha){return GASTOS.filter(function(r){return r.fecha===fecha;}).reduce(function(s,r){return s+r.valor;},0);}
 function renderVentasCharts(week){
   var base=filterMes(CIERRES,selectedMes);
+  if(week==='dia'){var _s=document.getElementById('ventasDiaSel');renderMetasBar('metasVentas',{tipo:'dia',fecha:_s?_s.value:''});}else if(week===-1){renderMetasBar('metasVentas',{tipo:'mes'});}else{renderMetasBar('metasVentas',{tipo:'semana',sem:week});}
   var d;
   if(week==='dia'){var sel=document.getElementById('ventasDiaSel');var fsel=sel?sel.value:'';d=base.filter(function(r){return r.fecha===fsel;});}
   else if(week===-1){d=base;}
@@ -541,24 +673,116 @@ function renderVentasCharts(week){
   document.getElementById('ventasKpis').innerHTML='<div class="kpi" style="--accent:var(--gold)"><span class="kpi-icon">&#128176;</span><div class="kpi-label">Venta Bruta</div><div class="kpi-value">'+fmt(tVB)+'</div><div class="kpi-sub">'+d.length+' dias</div></div><div class="kpi" style="--accent:var(--sage)"><span class="kpi-icon">&#128202;</span><div class="kpi-label">Venta Neta</div><div class="kpi-value">'+fmt(tVN)+'</div><div class="kpi-sub">'+(tVB?(tVN/tVB*100).toFixed(1):'0')+'% de VB</div></div><div class="kpi" style="--accent:var(--rose)"><span class="kpi-icon">&#129534;</span><div class="kpi-label">Gastos</div><div class="kpi-value">'+fmt(tG)+'</div><div class="kpi-sub">'+(tVN?(tG/tVN*100).toFixed(1):'0')+'% de VN</div></div><div class="kpi" style="--accent:var(--lavender)"><span class="kpi-icon">&#128181;</span><div class="kpi-label">Margen (V-G)</div><div class="kpi-value" style="color:'+(margen>=0?'#1faf6b':'#e0495f')+'">'+fmt(margen)+'</div><div class="kpi-sub">Venta neta - gastos</div></div>';
 }
 
-function renderGastosCharts(week){var base=filterMes(GASTOS,selectedMes);var g=week===-1?base:base.filter(function(r){return r.semana===week;});var tot={};g.forEach(function(r){tot[r.tipo]=(tot[r.tipo]||0)+r.valor;});var keys=Object.keys(tot).sort(function(a,b){return tot[b]-tot[a];});var total=sumBy(g,'valor');var baseC=filterMes(CIERRES,selectedMes);var vnTot=sumBy(week===-1?baseC:baseC.filter(function(r){return r.semana===week;}),'venta_neta');
+function renderGastosCharts(week){if(week===-1){renderMetasBar('metasGastos',{tipo:'mes'});}else{renderMetasBar('metasGastos',{tipo:'semana',sem:week});}var base=filterMes(GASTOS,selectedMes);var g=week===-1?base:base.filter(function(r){return r.semana===week;});var tot={};g.forEach(function(r){tot[r.tipo]=(tot[r.tipo]||0)+r.valor;});var keys=Object.keys(tot).sort(function(a,b){return tot[b]-tot[a];});var total=sumBy(g,'valor');var baseC=filterMes(CIERRES,selectedMes);var vnTot=sumBy(week===-1?baseC:baseC.filter(function(r){return r.semana===week;}),'venta_neta');
   makeChart('chartGastosBar','bar',keys.map(function(k){return TIPO_SHORT[k]||k;}),[{data:keys.map(function(k){return tot[k];}),backgroundColor:keys.map(function(k){return TIPO_COLOR[k]||'#8a93a6';}),borderRadius:7,borderSkipped:false}],{indexAxis:'y',scales:{x:{grid:{color:'rgba(20,30,60,.06)'},ticks:{callback:function(v){return fmt(v);}}},y:{grid:{display:false}}}});
   makeChart('chartGastosPie','doughnut',keys.map(function(k){return TIPO_SHORT[k]||k;}),[{data:keys.map(function(k){return tot[k];}),backgroundColor:keys.map(function(k){return TIPO_COLOR[k];}),borderWidth:2,borderColor:'#fff'}],{plugins:{legend:{display:false}},scales:{x:{display:false},y:{display:false}},cutout:'62%'});
   var coc=tot['1 Insumos para Cocina']||0,nom=tot['5 Nomina y Turnos']||0,svc=tot['6 Servicios Publicos y Arriendo']||0;
   document.getElementById('gastosKpis').innerHTML='<div class="kpi" style="--accent:var(--rose)"><span class="kpi-icon">\u{1F9FE}</span><div class="kpi-label">Total Gastos</div><div class="kpi-value">'+fmt(total)+'</div><div class="kpi-sub">'+(vnTot?(total/vnTot*100).toFixed(1)+'% de VN':'')+'</div></div><div class="kpi" style="--accent:var(--ember)"><span class="kpi-icon">\u{1F356}</span><div class="kpi-label">Cocina</div><div class="kpi-value">'+fmt(coc)+'</div><div class="kpi-sub">'+(total?(coc/total*100).toFixed(1)+'% del total':'')+'</div></div><div class="kpi" style="--accent:var(--lavender)"><span class="kpi-icon">\u{1F477}</span><div class="kpi-label">Nomina</div><div class="kpi-value">'+fmt(nom)+'</div><div class="kpi-sub">'+(total?(nom/total*100).toFixed(1)+'% del total':'')+'</div></div><div class="kpi" style="--accent:var(--gold)"><span class="kpi-icon">\u{1F3E0}</span><div class="kpi-label">Servicios</div><div class="kpi-value">'+fmt(svc)+'</div><div class="kpi-sub">'+(total?(svc/total*100).toFixed(1)+'% del total':'')+'</div></div>';
   document.getElementById('tablaGastos').innerHTML=g.slice().sort(function(a,b){return b.fecha.localeCompare(a.fecha);}).map(function(r){return '<tr><td class="mono" style="color:var(--dim)">'+r.fecha.slice(5)+'</td><td><span class="badge '+(TIPO_BADGE[r.tipo]||'badge-8')+'">'+(TIPO_SHORT[r.tipo]||r.tipo)+'</span></td><td style="color:var(--dim)">'+(r.proveedor||'-')+'</td><td>'+(r.producto||'-')+'</td><td class="mono" style="text-align:right">'+fmtFull(r.valor)+'</td></tr>';}).join('');
 }
-function renderSemaforoCharts(){var d=filterMes(CIERRES,selectedMes),g=filterMes(GASTOS,selectedMes);var totVN=sumBy(d,'venta_neta'),totCli=sumBy(d,'clientes'),ticket=totCli?totVN/totCli:0;
-  var sf=[{i:'\u{1F4CA}',l:'Venta Neta Mensual',v:totVN,m:METAS.venta_neta_mensual,f:fmt,a:'--sage'},{i:'\u{1F465}',l:'Clientes Mensual',v:totCli,m:METAS.clientes_mensual,f:fmtNum,a:'--sky'},{i:'\u{1F39F}',l:'Ticket Promedio',v:ticket,m:METAS.ticket_promedio,f:fmt,a:'--gold'}];
-  document.getElementById('sfMensualGrid').innerHTML=sf.map(function(k){var pv=k.v/k.m,color=semColor(pv),dot=semDot(pv);return '<div class="kpi" style="--accent:var('+k.a+')"><span class="kpi-icon">'+k.i+'</span><div class="kpi-label">'+k.l+'</div><div class="kpi-value">'+k.f(k.v)+'</div><div class="progress-wrap"><div class="flex-between"><span style="font-size:11px;color:var(--muted)">Meta: '+k.f(k.m)+'</span><span class="mono" style="font-size:12px;color:'+color+'">'+(pv*100).toFixed(1)+'%</span></div><div class="progress-bar"><div class="progress-fill" style="width:'+Math.min(pv*100,100)+'%;background:'+color+'"></div></div></div><div class="kpi-sub"><span class="semaforo-dot '+dot+'"></span>'+(dot==='green'?'META CUMPLIDA':dot==='yellow'?'Cerca de meta':'Por debajo')+'</div></div>';}).join('');
-  var META=METAS.venta_neta_diaria,last7=d.slice(-7);
-  document.getElementById('semaforoDiario').innerHTML=last7.map(function(r){var p=r.venta_neta/META;return '<div class="semaforo-item"><div class="semaforo-dot '+semDot(p)+'"></div><div class="semaforo-info"><div class="semaforo-name">'+semIcon(p)+' '+r.dia+' '+r.fecha.slice(5)+'</div><div class="semaforo-vals">VN: '+fmt(r.venta_neta)+' - '+r.clientes+' PAX</div></div><div class="semaforo-pct" style="color:'+semColor(p)+'">'+(p*100).toFixed(0)+'%</div></div>';}).join('');
-  var gt={};g.forEach(function(r){gt[r.tipo]=(gt[r.tipo]||0)+r.valor;});
-  var costos=[{l:'Cocina',v:(gt['1 Insumos para Cocina']||0)/(totVN||1),m:METAS.pct_cocina,c:'#e8613c',a:'--ember'},{l:'Nomina',v:(gt['5 Nomina y Turnos']||0)/(totVN||1),m:METAS.pct_nomina,c:'#7c5fd6',a:'--lavender'},{l:'Servicios',v:(gt['6 Servicios Publicos y Arriendo']||0)/(totVN||1),m:METAS.pct_servicios,c:'#e8941a',a:'--gold'}];
-  document.getElementById('sfCostosGrid').innerHTML=costos.map(function(c){var ok=c.v<=c.m,dot=ok?'green':c.v<=c.m*1.5?'yellow':'red';return '<div class="kpi" style="--accent:var('+c.a+')"><div class="kpi-label">'+c.l+'</div><div class="kpi-value mono">'+(c.v*100).toFixed(1)+'%</div><div class="progress-bar" style="margin-top:8px"><div class="progress-fill" style="width:'+Math.min(c.v*100,100)+'%;background:'+c.c+'"></div></div><div class="kpi-sub"><span class="semaforo-dot '+dot+'"></span>Meta <='+(c.m*100).toFixed(0)+'% - '+(ok?'OK':'Revisar')+'</div></div>';}).join('');
+function estadoClase(pv,inverso){
+  // inverso=true para gastos (menos es mejor)
+  if(inverso){return pv<=1?'bien':pv<=1.15?'medio':'malo';}
+  return pv>=1?'bien':pv>=0.8?'medio':'malo';
 }
+function estadoTxt(cl){return cl==='bien'?'En meta':cl==='medio'?'Cerca':'No cumple';}
+function estadoColor(cl){return cl==='bien'?'#1faf6b':cl==='medio'?'#e8941a':'#e0495f';}
+function rangoSemana(fecha){
+  // semana del mes que contiene 'fecha' (S1=1-7, S2=8-14, S3=15-21, S4=22-fin)
+  var sem=semanaDelMes(fecha);
+  var ym=fecha.slice(0,7);
+  return {ym:ym, sem:sem};
+}
+function datosPeriodo(fecha,tipo){
+  var cs,gs;
+  if(tipo==='dia'){cs=CIERRES.filter(function(r){return r.fecha===fecha;});gs=GASTOS.filter(function(r){return r.fecha===fecha;});}
+  else if(tipo==='semana'){var info=rangoSemana(fecha);cs=CIERRES.filter(function(r){return r.fecha.slice(0,7)===info.ym&&semanaDelMes(r.fecha)===info.sem;});gs=GASTOS.filter(function(r){return r.fecha.slice(0,7)===info.ym&&semanaDelMes(r.fecha)===info.sem;});}
+  else {var ym=fecha.slice(0,7);cs=CIERRES.filter(function(r){return r.fecha.slice(0,7)===ym;});gs=GASTOS.filter(function(r){return r.fecha.slice(0,7)===ym;});}
+  var gt={};gs.forEach(function(r){gt[r.tipo]=(gt[r.tipo]||0)+r.valor;});
+  var cli=sumBy(cs,'clientes');
+  var vBruta=sumBy(cs,'venta_bruta');
+  var tkRows=cs.filter(function(r){return r.ticket_carta>0;});
+  return {
+    venta_bruta:vBruta,
+    clientes:cli,
+    ticket: tkRows.length?sumBy(tkRows,'ticket_carta')/tkRows.length:0,
+    ejecutivos:sumBy(cs,'ejecutivos'),
+    gastos:sumBy(gs,'valor'),
+    turnos:gt['5 Nomina y Turnos']||0
+  };
+}
+function colPeriodo(label,val,meta,fmtFn,inverso){
+  var f=fmtFn||fmt;
+  var pv=meta>0?val/meta:0;
+  var cl=estadoClase(pv,inverso);
+  var col=estadoColor(cl);
+  var h='<div class="kpi-periodo-col '+cl+'">';
+  h+='<div class="kpi-per-label">'+label+'</div>';
+  h+='<div class="kpi-per-val" style="color:'+(cl==='malo'?'#e0495f':'var(--ink)')+'">'+f(val)+'</div>';
+  h+='<div class="kpi-per-meta">Meta: '+f(meta)+'</div>';
+  h+='<div class="kpi-per-bar"><div class="kpi-per-fill" style="width:'+Math.min(pv*100,100)+'%;background:'+col+'"></div></div>';
+  h+='<div class="kpi-per-estado" style="color:'+col+'">'+(cl==='bien'?'&#10003; ':cl==='medio'?'&#9888; ':'&#10007; ')+estadoTxt(cl)+' ('+(pv*100).toFixed(0)+'%)</div>';
+  if(cl==='malo')h+='<div class="kpi-alerta">Accion requerida</div>';
+  h+='</div>';
+  return h;
+}
+function tarjetaKPI(icon,titulo,desc,campo,metaKey,fmtFn,inverso,dDia,dSem,dMes){
+  var h='<div class="kpi-big"><div class="kpi-big-head"><div class="kpi-big-ic">'+icon+'</div><div><div class="kpi-big-titulo">'+titulo+'</div><div class="kpi-big-desc">'+desc+'</div></div></div><div class="kpi-periodos">';
+  h+=colPeriodo('Dia',dDia[campo],METAS[metaKey+'_diaria'],fmtFn,inverso);
+  h+=colPeriodo('Semana',dSem[campo],METAS[metaKey+'_semanal'],fmtFn,inverso);
+  h+=colPeriodo('Mes',dMes[campo],METAS[metaKey+'_mensual'],fmtFn,inverso);
+  h+='</div></div>';
+  return h;
+}
+function renderKPIsAdmin(){
+  var inp=document.getElementById('kpiFecha');
+  if(inp && !inp.value){var f=CIERRES.map(function(d){return d.fecha;}).sort();inp.value=f.length?f[f.length-1]:new Date().toISOString().slice(0,10);}
+  var fecha=inp?inp.value:'';
+  if(!fecha){document.getElementById('kpiAdminGrid').innerHTML='<div class="no-data-banner">Selecciona una fecha de referencia</div>';return;}
+  // leyenda
+  document.getElementById('kpiSemaforoLeyenda').innerHTML=
+    '<span><span class="kpi-ldot" style="background:#1faf6b"></span>En meta (100%+)</span>'+
+    '<span><span class="kpi-ldot" style="background:#e8941a"></span>Cerca (80-99%)</span>'+
+    '<span><span class="kpi-ldot" style="background:#e0495f"></span>No cumple (menos de 80%) - requiere accion</span>';
+  var dDia=datosPeriodo(fecha,'dia'),dSem=datosPeriodo(fecha,'semana'),dMes=datosPeriodo(fecha,'mes');
+  var html='<div class="kpi-admin-grid">';
+  html+=tarjetaKPI('&#128176;','Venta Bruta','Ventas totales segun POS','venta_bruta','venta_bruta',fmt,false,dDia,dSem,dMes);
+  html+=tarjetaKPI('&#128101;','Clientes Menu Salon','Comensales atendidos (PAX)','clientes','clientes',fmtNum,false,dDia,dSem,dMes);
+  html+=tarjetaKPI('&#127915;','Ticket Promedio','Valor promedio por comensal','ticket','ticket',fmt,false,dDia,dSem,dMes);
+  html+=tarjetaKPI('&#127857;','Ejecutivos','Almuerzos ejecutivos vendidos (Lun-Vie)','ejecutivos','ejecutivos',fmtNum,false,dDia,dSem,dMes);
+  html+=tarjetaKPI('&#129534;','Control de Gastos','Gastos del periodo (menos es mejor)','gastos','gastos',fmt,true,dDia,dSem,dMes);
+  html+='</div>';
+  document.getElementById('kpiAdminGrid').innerHTML=html;
+}
+function renderSemaforoCharts(){renderKPIsAdmin();}
+
+function renderAnioResumen(){
+  var el=document.getElementById('anioResumen');
+  if(!el)return;
+  var anios=[];CIERRES.forEach(function(d){var a=d.fecha.slice(0,4);if(a&&anios.indexOf(a)<0)anios.push(a);});
+  anios.sort();
+  var anio=anios.length?anios[anios.length-1]:String(new Date().getFullYear());
+  var html='<div class="anio-grid">';
+  for(var m=1;m<=12;m++){
+    var rows=CIERRES.filter(function(d){return d.mes===m && d.fecha.slice(0,4)===anio;});
+    var vn=sumBy(rows,'venta_neta');
+    var cli=sumBy(rows,'clientes');
+    var vacio=rows.length===0;
+    var meta=METAS.venta_neta_mensual;
+    var pv=meta>0?vn/meta:0;
+    var color=vacio?'var(--muted)':pv>=1?'#1faf6b':pv>=.8?'#e8941a':'#e0495f';
+    html+='<div class="anio-mes'+(vacio?' vacio':'')+'" onclick="selectMes('+m+');switchView(\'resumen\')">';
+    html+='<div class="anio-mes-nombre">'+NOMBRES_MES[m]+'</div>';
+    html+='<div class="anio-mes-vn" style="color:'+(vacio?'var(--muted)':'var(--ink)')+'">'+(vacio?'-':fmt(vn))+'</div>';
+    html+='<div class="anio-mes-sub" style="color:'+color+'">'+(vacio?'Sin datos':fmtNum(cli)+' cli  '+(pv*100).toFixed(0)+'%')+'</div>';
+    html+='</div>';
+  }
+  html+='</div>';
+  el.innerHTML=html;
+}
+
 function renderHistorial(data){var META=METAS.venta_neta_diaria,rows=data||CIERRES.slice().reverse();document.getElementById('tablaHistorial').innerHTML=rows.map(function(d){var tk=d.clientes>0?Math.round(d.venta_neta/d.clientes):0,p=d.venta_neta/META;return '<tr><td class="mono" style="color:var(--dim)">'+d.fecha+'</td><td>'+d.dia+'</td><td style="color:var(--dim)">'+d.encargado+'</td><td class="mono" style="text-align:right">'+fmtFull(d.venta_bruta)+'</td><td class="mono" style="text-align:right;color:#1faf6b">'+fmtFull(d.propinas)+'</td><td class="mono" style="text-align:right;color:#e8613c">'+fmtFull(d.ipoconsumo)+'</td><td class="mono" style="text-align:right;font-weight:600">'+fmtFull(d.venta_neta)+'</td><td style="text-align:right">'+fmtNum(d.clientes)+'</td><td class="mono" style="text-align:right">'+fmtFull(tk)+'</td><td style="text-align:center"><span class="semaforo-dot '+semDot(p)+'" style="display:inline-block"></span></td></tr>';}).join('')||'<tr><td colspan="10" style="text-align:center;color:var(--muted);padding:24px">Sin datos</td></tr>';var tVN=sumBy(rows,'venta_neta'),tC=sumBy(rows,'clientes');document.getElementById('ftDias').textContent=rows.length;document.getElementById('ftVN').textContent=fmt(tVN);document.getElementById('ftCli').textContent=fmtNum(tC);}
-function renderHistorialKpis(data){var tVB=sumBy(data,'venta_bruta'),tVN=sumBy(data,'venta_neta'),tC=sumBy(data,'clientes'),tk=tC?tVN/tC:0;document.getElementById('historialKpis').innerHTML='<div class="kpi" style="--accent:var(--gold)"><span class="kpi-icon">\u{1F4B0}</span><div class="kpi-label">Venta Bruta</div><div class="kpi-value">'+fmt(tVB)+'</div><div class="kpi-sub">'+data.length+' dias</div></div><div class="kpi" style="--accent:var(--sage)"><span class="kpi-icon">\u{1F4CA}</span><div class="kpi-label">Venta Neta</div><div class="kpi-value">'+fmt(tVN)+'</div><div class="kpi-sub">'+(tVB?(tVN/tVB*100).toFixed(1):'0')+'% de VB</div></div><div class="kpi" style="--accent:var(--sky)"><span class="kpi-icon">\u{1F465}</span><div class="kpi-label">Clientes</div><div class="kpi-value">'+fmtNum(tC)+'</div><div class="kpi-sub">Prom '+(data.length?Math.round(tC/data.length):0)+'/dia</div></div><div class="kpi" style="--accent:var(--lavender)"><span class="kpi-icon">\u{1F39F}</span><div class="kpi-label">Ticket Prom</div><div class="kpi-value">'+(tk?fmt(tk):'-')+'</div><div class="kpi-sub">VN / Clientes</div></div>';}
+function renderHistorialKpis(data){renderMetasBar('metasHistorial',{tipo:'mes'});renderAnioResumen();var tVB=sumBy(data,'venta_bruta'),tVN=sumBy(data,'venta_neta'),tC=sumBy(data,'clientes'),tk=tC?tVN/tC:0;document.getElementById('historialKpis').innerHTML='<div class="kpi" style="--accent:var(--gold)"><span class="kpi-icon">\u{1F4B0}</span><div class="kpi-label">Venta Bruta</div><div class="kpi-value">'+fmt(tVB)+'</div><div class="kpi-sub">'+data.length+' dias</div></div><div class="kpi" style="--accent:var(--sage)"><span class="kpi-icon">\u{1F4CA}</span><div class="kpi-label">Venta Neta</div><div class="kpi-value">'+fmt(tVN)+'</div><div class="kpi-sub">'+(tVB?(tVN/tVB*100).toFixed(1):'0')+'% de VB</div></div><div class="kpi" style="--accent:var(--sky)"><span class="kpi-icon">\u{1F465}</span><div class="kpi-label">Clientes</div><div class="kpi-value">'+fmtNum(tC)+'</div><div class="kpi-sub">Prom '+(data.length?Math.round(tC/data.length):0)+'/dia</div></div><div class="kpi" style="--accent:var(--lavender)"><span class="kpi-icon">\u{1F39F}</span><div class="kpi-label">Ticket Prom</div><div class="kpi-value">'+(tk?fmt(tk):'-')+'</div><div class="kpi-sub">VN / Clientes</div></div>';}
 function aplicarFiltroHistorial(){var de=document.getElementById('filtroDesde').value,ha=document.getElementById('filtroHasta').value,data=CIERRES.slice().reverse();if(de)data=data.filter(function(d){return d.fecha>=de;});if(ha)data=data.filter(function(d){return d.fecha<=ha;});historialFiltrado=data;renderHistorial(data);renderHistorialKpis(data);}
 function aplicarFiltroHistorial2(){var de=document.getElementById('filtroDesde2').value,ha=document.getElementById('filtroHasta2').value,data=CIERRES.slice().reverse();if(de)data=data.filter(function(d){return d.fecha>=de;});if(ha)data=data.filter(function(d){return d.fecha<=ha;});historialFiltrado=data;renderHistorial(data);renderHistorialKpis(data);}
 function limpiarFiltro(){['filtroDesde','filtroHasta','filtroDesde2','filtroHasta2'].forEach(function(id){var el=document.getElementById(id);if(el)el.value='';});historialFiltrado=CIERRES.slice().reverse();renderHistorial(historialFiltrado);renderHistorialKpis(historialFiltrado);}
@@ -588,6 +812,201 @@ function renderCierre(){var fecha=document.getElementById('cierreFecha').value;i
   html+='</div>';
   cont.innerHTML=html;
 }
+function descargarKPIsPDF(){
+  var inp=document.getElementById('kpiFecha');
+  var fecha=inp?inp.value:'';
+  if(!fecha){toast('Selecciona una fecha de referencia','error');return;}
+  var jsPDFns=window.jspdf||window.jsPDF;var PDF=jsPDFns?jsPDFns.jsPDF||jsPDFns:null;
+  if(!PDF){toast('No se pudo cargar el generador PDF','error');return;}
+  var doc=new PDF({unit:'pt',format:'a4'});
+  var W=doc.internal.pageSize.getWidth(),H=doc.internal.pageSize.getHeight();
+  var gold=[199,147,48],ink=[29,36,51],dim=[107,116,136];
+  doc.setFillColor(18,21,29);doc.rect(0,0,W,84,'F');
+  doc.setTextColor(240,201,107);doc.setFont('helvetica','bold');doc.setFontSize(20);doc.text('MONTANA',40,38);
+  doc.setTextColor(180,188,200);doc.setFont('helvetica','normal');doc.setFontSize(9);doc.text('VINOS & PARRILLA',40,54);
+  doc.setTextColor(255,255,255);doc.setFont('helvetica','bold');doc.setFontSize(12);doc.text('INFORME DE KPIs - TABLERO DE CONTROL',40,72);
+  doc.setTextColor(180,188,200);doc.setFont('helvetica','normal');doc.setFontSize(9);doc.text('Fecha referencia: '+fecha,W-40,72,{align:'right'});
+  var y=108;
+  var dDia=datosPeriodo(fecha,'dia'),dSem=datosPeriodo(fecha,'semana'),dMes=datosPeriodo(fecha,'mes');
+  var infoSem=rangoSemana(fecha);
+  function seccion(t){if(y>H-90){doc.addPage();y=48;}doc.setFillColor(244,246,250);doc.rect(40,y,W-80,24,'F');doc.setTextColor(gold[0],gold[1],gold[2]);doc.setFont('helvetica','bold');doc.setFontSize(11);doc.text(t.toUpperCase(),48,y+16);y+=30;
+    // headers de columnas
+    doc.setTextColor(dim[0],dim[1],dim[2]);doc.setFont('helvetica','bold');doc.setFontSize(8.5);
+    doc.text('PERIODO',48,y+8);doc.text('RESULTADO',W-300,y+8,{align:'right'});doc.text('META',W-180,y+8,{align:'right'});doc.text('CUMPL.',W-100,y+8,{align:'right'});doc.text('ESTADO',W-48,y+8,{align:'right'});y+=20;}
+  function filaKPI(periodo,val,meta,fFn,inverso){var f=fFn||fmt;var pv=meta>0?val/meta:0;var cl=estadoClase(pv,inverso);var c=cl==='bien'?[31,175,107]:cl==='medio'?[232,148,26]:[224,73,95];
+    doc.setTextColor(ink[0],ink[1],ink[2]);doc.setFont('helvetica','normal');doc.setFontSize(9.5);doc.text(periodo,48,y);
+    doc.setFont('helvetica','bold');doc.text(f(val),W-300,y,{align:'right'});
+    doc.setFont('helvetica','normal');doc.setTextColor(dim[0],dim[1],dim[2]);doc.text(f(meta),W-180,y,{align:'right'});
+    doc.setTextColor(c[0],c[1],c[2]);doc.setFont('helvetica','bold');doc.text((pv*100).toFixed(0)+'%',W-100,y,{align:'right'});
+    doc.text(cl==='bien'?'EN META':cl==='medio'?'CERCA':'NO CUMPLE',W-48,y,{align:'right'});y+=16;if(y>H-50){doc.addPage();y=48;}}
+  function bloque(titulo,campo,metaKey,fFn,inverso){seccion(titulo);
+    filaKPI('Dia ('+fecha+')',dDia[campo],METAS[metaKey+'_diaria'],fFn,inverso);
+    filaKPI('Semana '+infoSem.sem+' del mes',dSem[campo],METAS[metaKey+'_semanal'],fFn,inverso);
+    filaKPI('Mes ('+fecha.slice(0,7)+')',dMes[campo],METAS[metaKey+'_mensual'],fFn,inverso);
+    y+=8;}
+  bloque('Venta Bruta','venta_bruta','venta_bruta',fmtFull,false);
+  bloque('Clientes Menu Salon','clientes','clientes',fmtNum,false);
+  bloque('Ticket Promedio','ticket','ticket',fmtFull,false);
+  bloque('Ejecutivos','ejecutivos','ejecutivos',fmtNum,false);
+  bloque('Control de Gastos (menos es mejor)','gastos','gastos',fmtFull,true);
+  // resumen / plan de accion
+  if(y>H-160){doc.addPage();y=48;}
+  seccion('Plan de accion sugerido');y-=8;
+  var alertas=[];
+  function chk(nombre,val,meta,inverso){var pv=meta>0?val/meta:0;var cl=estadoClase(pv,inverso);if(cl==='malo')alertas.push(nombre+' ('+(pv*100).toFixed(0)+'% de la meta del mes)');}
+  chk('Venta Bruta',dMes.venta_bruta,METAS.venta_bruta_mensual,false);
+  chk('Clientes',dMes.clientes,METAS.clientes_mensual,false);
+  chk('Ticket Promedio',dMes.ticket,METAS.ticket_promedio,false);
+  chk('Ejecutivos',dMes.ejecutivos,METAS.ejecutivos_mensual,false);
+  chk('Gastos',dMes.gastos,METAS.gastos_mensual,true);
+  doc.setTextColor(ink[0],ink[1],ink[2]);doc.setFont('helvetica','normal');doc.setFontSize(10);
+  var txt;
+  if(alertas.length===0){txt='Todos los indicadores del mes van en linea con las metas. Mantener el ritmo operativo actual y reforzar lo que esta funcionando.';}
+  else{txt='Indicadores que requieren atencion este mes: '+alertas.join('; ')+'. Se recomienda definir acciones concretas sobre estos puntos (promociones, control de costos, refuerzo de servicio o ajuste de turnos segun corresponda).';}
+  var ls=doc.splitTextToSize(txt,W-96);for(var i=0;i<ls.length;i++){if(y>H-50){doc.addPage();y=48;}doc.text(ls[i],48,y);y+=15;}
+  doc.setTextColor(dim[0],dim[1],dim[2]);doc.setFont('helvetica','normal');doc.setFontSize(7.5);
+  doc.text('Dashboard Montana - Generado '+new Date().toLocaleString('es-CO'),40,H-24);
+  doc.save('KPIs_Montana_'+fecha+'.pdf');
+  toast('Informe de KPIs descargado','success');
+}
+
+function descargarInformeContable(){
+  var de=document.getElementById('filtroDesde2').value;
+  var ha=document.getElementById('filtroHasta2').value;
+  var cierres=CIERRES.slice();
+  var gastos=GASTOS.slice();
+  if(de){cierres=cierres.filter(function(d){return d.fecha>=de;});gastos=gastos.filter(function(d){return d.fecha>=de;});}
+  if(ha){cierres=cierres.filter(function(d){return d.fecha<=ha;});gastos=gastos.filter(function(d){return d.fecha<=ha;});}
+  cierres.sort(function(a,b){return a.fecha.localeCompare(b.fecha);});
+  if(!cierres.length && !gastos.length){toast('No hay datos en el intervalo seleccionado','error');return;}
+  var jsPDFns=window.jspdf||window.jsPDF;var PDF=jsPDFns?jsPDFns.jsPDF||jsPDFns:null;
+  if(!PDF){toast('No se pudo cargar el generador PDF','error');return;}
+  var doc=new PDF({unit:'pt',format:'a4'});
+  var W=doc.internal.pageSize.getWidth(),H=doc.internal.pageSize.getHeight();
+  var gold=[199,147,48],ink=[29,36,51],dim=[107,116,136],linec=[226,231,240];
+  var y=0;
+  var desdeTxt=de||(cierres.length?cierres[0].fecha:'-');
+  var hastaTxt=ha||(cierres.length?cierres[cierres.length-1].fecha:'-');
+  function header(titulo){
+    doc.setFillColor(18,21,29);doc.rect(0,0,W,84,'F');
+    doc.setTextColor(240,201,107);doc.setFont('helvetica','bold');doc.setFontSize(20);doc.text('MONTANA',40,38);
+    doc.setTextColor(180,188,200);doc.setFont('helvetica','normal');doc.setFontSize(9);doc.text('VINOS & PARRILLA',40,54);
+    doc.setTextColor(255,255,255);doc.setFont('helvetica','bold');doc.setFontSize(12);doc.text(titulo,40,72);
+    doc.setTextColor(180,188,200);doc.setFont('helvetica','normal');doc.setFontSize(9);
+    doc.text('Periodo: '+desdeTxt+'  al  '+hastaTxt,W-40,72,{align:'right'});
+    y=108;
+  }
+  function checkPage(min){if(y>H-(min||60)){doc.addPage();y=48;}}
+  function seccion(t){checkPage(70);doc.setFillColor(244,246,250);doc.rect(40,y,W-80,24,'F');doc.setTextColor(gold[0],gold[1],gold[2]);doc.setFont('helvetica','bold');doc.setFontSize(11);doc.text(t.toUpperCase(),48,y+16);y+=36;}
+  function fila(l,v,bold){doc.setTextColor(dim[0],dim[1],dim[2]);doc.setFont('helvetica','normal');doc.setFontSize(10);doc.text(l,48,y);doc.setTextColor(ink[0],ink[1],ink[2]);doc.setFont('helvetica',bold?'bold':'normal');doc.text(v,W-48,y,{align:'right'});y+=17;checkPage(50);}
+  function filaMeta(l,val,meta,fFn){var f=fFn||fmtFull;var pv=meta>0?val/meta:0;doc.setTextColor(dim[0],dim[1],dim[2]);doc.setFont('helvetica','normal');doc.setFontSize(10);doc.text(l,48,y);var c=pv>=1?[31,175,107]:pv>=.8?[232,148,26]:[224,73,95];doc.setTextColor(ink[0],ink[1],ink[2]);doc.setFont('helvetica','bold');doc.text(f(val),W-200,y,{align:'right'});doc.setTextColor(dim[0],dim[1],dim[2]);doc.setFont('helvetica','normal');doc.text('Meta '+f(meta),W-120,y,{align:'right'});doc.setTextColor(c[0],c[1],c[2]);doc.setFont('helvetica','bold');doc.text((pv*100).toFixed(0)+'%',W-48,y,{align:'right'});y+=17;checkPage(50);}
+  function parrafo(t){doc.setTextColor(ink[0],ink[1],ink[2]);doc.setFont('helvetica','normal');doc.setFontSize(10);var ls=doc.splitTextToSize(t,W-96);for(var i=0;i<ls.length;i++){checkPage(40);doc.text(ls[i],48,y);y+=15;}y+=6;}
+
+  // ---- calculos ----
+  var nDias=cierres.length;
+  var vBruta=sumBy(cierres,'venta_bruta'), vNeta=sumBy(cierres,'venta_neta'), prop=sumBy(cierres,'propinas'), ipo=sumBy(cierres,'ipoconsumo');
+  var cli=sumBy(cierres,'clientes'), ejec=sumBy(cierres,'ejecutivos'), almL=sumBy(cierres,'alm_local'), almD=sumBy(cierres,'alm_dom');
+  var tkRows=cierres.filter(function(r){return r.ticket_carta>0;}); var tkProm=tkRows.length?sumBy(tkRows,'ticket_carta')/tkRows.length:0;
+  var ticketReal=cli>0?vNeta/cli:0;
+  var totGastos=sumBy(gastos,'valor');
+  var gt={};gastos.forEach(function(r){gt[r.tipo]=(gt[r.tipo]||0)+r.valor;});
+  var turnos=gt['5 Nomina y Turnos']||0;
+  var utilidad=vNeta-totGastos;
+  var margenPct=vNeta>0?utilidad/vNeta*100:0;
+  var pagos={Datafono:sumBy(cierres,'datafono'),Efectivo:sumBy(cierres,'efectivo'),QR:sumBy(cierres,'qr'),Nequi:sumBy(cierres,'nequi'),Daviplata:sumBy(cierres,'daviplata')};
+  var totPagos=pagos.Datafono+pagos.Efectivo+pagos.QR+pagos.Nequi+pagos.Daviplata;
+  var canalEv=sumBy(cierres,'canal_eventos'),canalBon=sumBy(cierres,'canal_bonos'),canalTQ=sumBy(cierres,'canal_tq'),canalDec=sumBy(cierres,'canal_decoracion');
+
+  header('INFORME DE CIERRE CONTABLE');
+
+  seccion('1. Resumen ejecutivo');
+  parrafo('El presente informe consolida la operacion del periodo comprendido entre el '+desdeTxt+' y el '+hastaTxt+', con un total de '+nDias+' dias de operacion registrados. La venta neta del periodo fue de '+fmtFull(vNeta)+', con gastos por '+fmtFull(totGastos)+', generando una utilidad operativa de '+fmtFull(utilidad)+' ('+margenPct.toFixed(1)+'% de margen sobre venta neta).');
+
+  seccion('2. Resultados financieros');
+  fila('Venta Bruta (POS)',fmtFull(vBruta));
+  fila('(-) Propinas',fmtFull(prop));
+  fila('(-) Ipoconsumo 8%',fmtFull(ipo));
+  fila('Venta Neta',fmtFull(vNeta),true);
+  fila('(-) Total Gastos',fmtFull(totGastos));
+  fila('Utilidad Operativa',fmtFull(utilidad),true);
+  fila('Margen Operativo',margenPct.toFixed(1)+'%',true);
+
+  seccion('3. Indicadores operativos (KPIs)');
+  fila('Dias de operacion',String(nDias));
+  fila('Clientes atendidos (PAX)',fmtNum(cli));
+  fila('Promedio clientes/dia',nDias?fmtNum(Math.round(cli/nDias)):'0');
+  fila('Ticket promedio real (VN/PAX)',fmtFull(ticketReal));
+  fila('Ticket promedio carta',fmtFull(tkProm));
+  fila('Ejecutivos vendidos',fmtNum(ejec));
+  fila('  - Almuerzo local',fmtNum(almL));
+  fila('  - Almuerzo domicilio',fmtNum(almD));
+  fila('Venta neta promedio/dia',nDias?fmtFull(vNeta/nDias):'$0');
+
+  seccion('4. Cumplimiento de metas (mensual)');
+  filaMeta('Venta Bruta',vBruta,METAS.venta_bruta_mensual);
+  filaMeta('Venta Neta',vNeta,METAS.venta_neta_mensual);
+  filaMeta('Clientes Salon',cli,METAS.clientes_mensual,fmtNum);
+  filaMeta('Ticket Promedio',ticketReal,METAS.ticket_promedio);
+  filaMeta('Ejecutivos',ejec,METAS.ejecutivos_mensual,fmtNum);
+  filaMeta('Pago Turnos',turnos,METAS.turnos_mensual);
+  filaMeta('Gastos',totGastos,METAS.gastos_mensual);
+
+  seccion('5. Distribucion de gastos por categoria');
+  var gk=Object.keys(gt).sort(function(a,b){return gt[b]-gt[a];});
+  gk.forEach(function(k){fila((TIPO_SHORT[k]||k),fmtFull(gt[k])+'   ('+(totGastos>0?(gt[k]/totGastos*100).toFixed(1):'0')+'%)');});
+  fila('TOTAL GASTOS',fmtFull(totGastos),true);
+
+  seccion('6. Conciliacion de medios de pago');
+  fila('Datafono / Tarjetas',fmtFull(pagos.Datafono));
+  fila('Efectivo en caja',fmtFull(pagos.Efectivo));
+  fila('QR Bancolombia',fmtFull(pagos.QR));
+  fila('Nequi',fmtFull(pagos.Nequi));
+  fila('Daviplata',fmtFull(pagos.Daviplata));
+  fila('Total recaudado',fmtFull(totPagos),true);
+  var difPago=totPagos-vBruta;
+  fila('Diferencia vs Venta Bruta',fmtFull(difPago)+(Math.abs(difPago)>1000?'  (revisar)':'  (ok)'),true);
+
+  if(canalEv+canalBon+canalTQ+canalDec>0){
+    seccion('7. Canales especiales');
+    if(canalEv>0)fila('Eventos salon',fmtFull(canalEv));
+    if(canalBon>0)fila('Bonos vendidos',fmtFull(canalBon));
+    if(canalTQ>0)fila('Despachos TQ (CxC)',fmtFull(canalTQ));
+    if(canalDec>0)fila('Decoracion',fmtFull(canalDec));
+  }
+
+  seccion('8. Analisis y observaciones');
+  var analisis='';
+  analisis+='Rentabilidad: el margen operativo del periodo fue de '+margenPct.toFixed(1)+'%. ';
+  if(margenPct>=30)analisis+='Es un margen saludable para el negocio. ';
+  else if(margenPct>=15)analisis+='Es un margen aceptable, con espacio de mejora en control de costos. ';
+  else if(margenPct>=0)analisis+='El margen es ajustado; se recomienda revisar la estructura de gastos. ';
+  else analisis+='El periodo presento perdida operativa; requiere atencion inmediata en costos e ingresos. ';
+  var cocina=gt['1 Insumos para Cocina']||0;
+  if(vNeta>0){analisis+='El costo de cocina represento el '+(cocina/vNeta*100).toFixed(1)+'% de la venta neta (meta '+(METAS.pct_cocina*100)+'%). ';analisis+='La nomina y turnos represento el '+(turnos/vNeta*100).toFixed(1)+'% de la venta neta (meta '+(METAS.pct_nomina*100)+'%). ';}
+  parrafo(analisis);
+  var cumpleVN=vNeta>=METAS.venta_neta_mensual;
+  parrafo('Cumplimiento de meta de venta neta: '+(cumpleVN?'CUMPLIDA':'NO cumplida ('+(vNeta/METAS.venta_neta_mensual*100).toFixed(0)+'% de la meta mensual)')+'. Ticket promedio real de '+fmtFull(ticketReal)+' frente a meta de '+fmtFull(METAS.ticket_promedio)+'.');
+
+  // tabla diaria
+  doc.addPage();y=48;header('DETALLE DIARIO');
+  seccion('Cierres del periodo');
+  doc.setFillColor(244,246,250);doc.rect(40,y-4,W-80,18,'F');
+  doc.setTextColor(dim[0],dim[1],dim[2]);doc.setFont('helvetica','bold');doc.setFontSize(8);
+  doc.text('FECHA',46,y+8);doc.text('V.BRUTA',W-330,y+8,{align:'right'});doc.text('V.NETA',W-230,y+8,{align:'right'});doc.text('PAX',W-150,y+8,{align:'right'});doc.text('TICKET',W-48,y+8,{align:'right'});
+  y+=22;
+  cierres.forEach(function(d){checkPage(40);var tk=d.clientes>0?d.venta_neta/d.clientes:0;doc.setTextColor(ink[0],ink[1],ink[2]);doc.setFont('helvetica','normal');doc.setFontSize(8.5);doc.text(d.fecha+' '+String(d.dia).slice(0,3),46,y);doc.text(fmtFull(d.venta_bruta),W-330,y,{align:'right'});doc.text(fmtFull(d.venta_neta),W-230,y,{align:'right'});doc.text(String(d.clientes),W-150,y,{align:'right'});doc.text(fmtFull(tk),W-48,y,{align:'right'});y+=14;});
+  y+=4;doc.setDrawColor(linec[0],linec[1],linec[2]);doc.line(40,y,W-40,y);y+=16;
+  doc.setFont('helvetica','bold');doc.setFontSize(9);doc.setTextColor(ink[0],ink[1],ink[2]);
+  doc.text('TOTALES',46,y);doc.text(fmtFull(vBruta),W-330,y,{align:'right'});doc.text(fmtFull(vNeta),W-230,y,{align:'right'});doc.text(fmtNum(cli),W-150,y,{align:'right'});
+
+  // pie de pagina en todas
+  var pages=doc.internal.getNumberOfPages();
+  for(var pi=1;pi<=pages;pi++){doc.setPage(pi);doc.setTextColor(dim[0],dim[1],dim[2]);doc.setFont('helvetica','normal');doc.setFontSize(7.5);doc.text('Dashboard Montana - Generado '+new Date().toLocaleString('es-CO')+'   |   Pagina '+pi+' de '+pages,40,H-24);}
+
+  doc.save('Informe_Contable_Montana_'+desdeTxt+'_a_'+hastaTxt+'.pdf');
+  toast('Informe contable descargado','success');
+}
+
 function descargarCierrePDF(){
   var fecha=document.getElementById('cierreFecha').value;
   if(!fecha){toast('Selecciona una fecha primero','error');return;}
@@ -616,6 +1035,16 @@ function descargarCierrePDF(){
   var vb=d?d.venta_bruta:0,vn=d?d.venta_neta:0,pr=d?d.propinas:0,ip=d?d.ipoconsumo:0;
   seccion('Ventas del dia');
   fila('Venta Bruta (POS)',fmtFull(vb));fila('Propinas',fmtFull(pr));fila('Ipoconsumo 8%',fmtFull(ip));fila('Venta Neta',fmtFull(vn));
+  y+=6;seccion('Seguimiento de metas del dia');
+  function filaMeta(l,val,meta,fFn){var f=fFn||fmtFull;var pv=meta>0?val/meta:0;var txt=f(val)+'  /  '+f(meta)+'  ('+(pv*100).toFixed(0)+'%)';doc.setTextColor(dim[0],dim[1],dim[2]);doc.setFont('helvetica','normal');doc.setFontSize(10);doc.text(l,48,y);var c=pv>=1?[31,175,107]:pv>=.8?[232,148,26]:[224,73,95];doc.setTextColor(c[0],c[1],c[2]);doc.setFont('helvetica','bold');doc.text(txt,W-48,y,{align:'right'});y+=18;}
+  var _g=gd.reduce(function(s,x){return s+x.valor;},0);
+  var _turnos=gd.filter(function(x){return x.tipo==='5 Nomina y Turnos';}).reduce(function(s,x){return s+x.valor;},0);
+  filaMeta('Venta Bruta',vb,METAS.venta_bruta_diaria);
+  filaMeta('Clientes Salon',d?d.clientes:0,METAS.clientes_diaria,fmtNum);
+  filaMeta('Ticket Promedio',d&&d.ticket_carta?d.ticket_carta:0,METAS.ticket_promedio);
+  filaMeta('Ejecutivos',d?d.ejecutivos:0,METAS.ejecutivos_diaria,fmtNum);
+  filaMeta('Pago Turnos',_turnos,METAS.turnos_diaria);
+  filaMeta('Gastos',_g,METAS.gastos_diaria);
   y+=6;seccion('Clientes y ejecutivos');
   fila('PAX Total',d?fmtNum(d.clientes):'0');fila('Ticket Promedio Carta',d&&d.ticket_carta?fmtFull(d.ticket_carta):'-');fila('Ejecutivos Total',d?fmtNum(d.ejecutivos):'0');fila('Ejecutivo Salon (local)',d?fmtNum(d.alm_local):'0');fila('Ejecutivo Pedido (domicilio)',d?fmtNum(d.alm_dom):'0');
   y+=6;seccion('Medios de pago');
@@ -638,7 +1067,7 @@ function descargarCierrePDF(){
   toast('PDF descargado','success');
 }
 
-function switchView(v){var vs=document.querySelectorAll('.view');for(var i=0;i<vs.length;i++)vs[i].classList.remove('active');var nb=document.querySelectorAll('.nav-btn');for(var j=0;j<nb.length;j++)nb[j].classList.remove('active');document.getElementById('view-'+v).classList.add('active');var btn=document.querySelector('.nav-btn[onclick="switchView(\''+v+'\')"]');if(btn)btn.classList.add('active');currentView=v;var t={resumen:'Resumen',ventas:'Ventas',gastos:'Gastos',semaforo:'Semaforo de KPIs',historial:'Historial',cierre:'Cierre Diario'};document.getElementById('contentTitle').textContent=t[v]||'Montana';setTimeout(function(){if(v==='resumen')initResumenCharts();if(v==='ventas')renderVentasCharts(activeWeekVentas);if(v==='gastos')renderGastosCharts(activeWeekGastos);if(v==='semaforo')renderSemaforoCharts();if(v==='historial'){renderHistorial(historialFiltrado);renderHistorialKpis(historialFiltrado);}if(v==='cierre')initCierreView();},50);}
+function switchView(v){var vs=document.querySelectorAll('.view');for(var i=0;i<vs.length;i++)vs[i].classList.remove('active');var nb=document.querySelectorAll('.nav-btn');for(var j=0;j<nb.length;j++)nb[j].classList.remove('active');document.getElementById('view-'+v).classList.add('active');var btn=document.querySelector('.nav-btn[onclick="switchView(\''+v+'\')"]');if(btn)btn.classList.add('active');currentView=v;var t={resumen:'Resumen',ventas:'Ventas',gastos:'Gastos',semaforo:'KPIs',historial:'Historial',cierre:'Cierre Diario'};document.getElementById('contentTitle').textContent=t[v]||'Montana';setTimeout(function(){if(v==='resumen')initResumenCharts();if(v==='ventas')renderVentasCharts(activeWeekVentas);if(v==='gastos')renderGastosCharts(activeWeekGastos);if(v==='semaforo')renderSemaforoCharts();if(v==='historial'){renderHistorial(historialFiltrado);renderHistorialKpis(historialFiltrado);}if(v==='cierre')initCierreView();},50);}
 function updateClock(){var n=new Date();document.getElementById('liveClock').textContent=n.toLocaleDateString('es-CO',{day:'2-digit',month:'short',year:'numeric'})+' - '+n.toLocaleTimeString('es-CO',{hour:'2-digit',minute:'2-digit'});}
 setInterval(updateClock,1000);updateClock();
 document.addEventListener('DOMContentLoaded',function(){
