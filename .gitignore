@@ -7,3 +7,12 @@ build/
 *.log
 __pycache__/
 *.pyc
+node_modules/
+.env
+.DS_Store
+.vscode/
+dist/
+build/
+*.log
+__pycache__/
+*.pyc
